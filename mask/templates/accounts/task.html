@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>dashboard</title>
+</head>
+<body>
+
+<center>
+
+<h1>TASK MODEL DATABASE</h1>
+
+<table border="5px">
+ <thead>
+  <th>TL(id)</th>
+  <th>NAME</th>
+  <th>TEAM</th>
+  <th>TEAM MEMBERS</th>
+
+  <th>STATUS</th>
+  <th>STARTED AT</th>
+  <th>COMPLETED AT</th>
+  <th>ACTIONS</th>
+
+</thead>
+{% for t in TL %}
+<tr>
+  <td> {{t.tlid }}</td>
+  <td> {{t.name }}</td>
+  <td> {{t.team }}</td>
+  <td> {{t.team_members }}</td>
+  <td> {{t.status }}</td>
+  <td> {{t.started_at }}</td>
+     <td>{{t.completed_at }}</td>
+     <td> <a href="/Tupdate/{{t.id}}"><button>update</button> <a href="/Tdelete/{{t.id}}"><button>Delete</button></a></td> 
+{% endfor %}
+</table>
+<br/>
+
+<a href="/Tform"><button>INSERT</button></a>
+</center> 
+
+</body>
+</html>

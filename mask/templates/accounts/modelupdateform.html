@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>UpdateFrom</title>
+</head>
+<body>
+	<center>
+<h1> UPDATE Model FROM </h1>
+<from method="POST">
+{% csrf_token %}
+ ID: : <input type="text" name="eid" value="{{M.id}}"><br>
+NAME: <input type="text" name="name" value="{{M.name}}"><br>
+TEAM MEMEBRS:<input type="text" name="team_members" value="{{M.team_members}}"><br>
+TEAM_LEADER:<input type="text" name="team_leader" value="{{M.team_leader}}"><br>
+
+
+</from>
+<button>SAVE</button>
+
+
+</body>
+</html>

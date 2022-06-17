@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Udate task</title>
+</head>
+<body>
+	<center>
+<h1> UPDATE FROM </h1>
+<from method="POST">
+{% csrf_token %}
+TLID: : <input type="text" name="tlid" value="{{L.tlid}}"><br>
+NAME: <input type="text" name="name" value="{{L.name}}"><br>
+TEAM:<input type="text" name="team" value="{{L.team}}"><br>
+TEAM MEMBERS:<input type="text" name="team_members" value="{{L.team_members}}"><br>
+STATUS: <input type="text" name="status" value="{{L.status}}"><br>
+STARTED AT:<input type="text" name="started_at" value="{{L.started_at}}"><br>
+COMPELTED AT:<input type="text" name="completed_at" value="{{L.completed_at}}"><br>
+
+
+</from>
+<button>SAVE</button>
+
+</body>
+</html>

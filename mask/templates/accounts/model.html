@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>dashboard</title>
+</head>
+<body>
+
+<center>
+<h1>TEAM MODEL DATABASE</h1>
+
+<table border="7px">
+ <thead>
+  <th>EMP(id)</th>
+  <th>NAME</th>
+  
+  <th>TEAM MEMBERS</th>
+  <th>TEAM LEADER</th>
+  <th>ACTIONS</th>
+ 
+</thead>
+{% for m in TM %}
+<tr>
+  <td> {{m.eid }}</td>
+  <td> {{m.name }}</td>
+  <td> {{m.team_members}}</td>
+  <td> {{m.team_leader}}</td>
+  <td> <a href=/Mupdate/{{m.id}}><button>update</button></a> <a href="/Mdelete/{{m.id}}"><button>Delete</button></a></td> 
+
+{% endfor %}
+</table>
+<a href="/Mform"><button>INSERT</button></a>
+</center>
+
+
+</body>
+</html>
+
